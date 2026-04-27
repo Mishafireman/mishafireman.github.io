@@ -12,6 +12,11 @@ body {
 }
 
 .card {
+    /* Додайте ці рядки до існуючих */
+    position: relative; /* Щоб скрипт міг перемикати на absolute */
+    cursor: grab;       /* Курсор у вигляді "долоні" */
+    user-select: none;  /* Щоб текст не виділявся під час перетягування */
+    /* ---------------------------*/
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
