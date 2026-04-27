@@ -1,33 +1,4 @@
-const card = document.querySelector('.card');
-let isDragging = false;
-let offsetX, offsetY;
-
-// Коли ми натискаємо на картку
-card.onmousedown = function(e) {
-    isDragging = true;
-    // Рахуємо відступ курсора від краю картки
-    offsetX = e.clientX - card.getBoundingClientRect().left;
-    offsetY = e.clientY - card.getBoundingClientRect().top;
-    card.style.cursor = 'grabbing';
-};
-
-// Коли ми рухаємо мишкою
-document.onmousemove = function(e) {
-    if (!isDragging) return;
-    
-    // Встановлюємо нові координати (прибираємо центрування CSS)
-    card.style.position = 'absolute';
-    card.style.margin = '0';
-    card.style.left = (e.clientX - offsetX) + 'px';
-    card.style.top = (e.clientY - offsetY) + 'px';
-};
-
-// Коли ми відпускаємо мишку
-document.onmouseup = function() {
-    isDragging = false;
-    card.style.cursor = 'grab';
-};
-// Додаємо переклад візитівки
+// 1. Словник перекладів
 const translations = {
     ua: {
         title: "Вітаю! Сайт працює",
@@ -46,10 +17,41 @@ const translations = {
     }
 };
 
-function changeLanguage(lang) {
+// 2. Функція перекладу (зробимо її глобальною)
+window.changeLanguage = function(lang) {
     const elements = document.querySelectorAll('[data-key]');
     elements.forEach(el => {
         const key = el.getAttribute('data-key');
-        el.innerText = translations[lang][key];
+        if (translations[lang][key]) {
+            el.innerText = translations[lang][key];
+        }
     });
-}
+};
+
+// 3. Код для перетягування картки
+const card = document.querySelector('.card');
+let isDragging = false;
+let offsetX, offsetY;
+
+card.onmousedown = function(e) {
+    // Не починати перетягування, якщо ми клікнули по кнопці
+    if (e.target.tagName === 'BUTTON') return;
+
+    isDragging = true;
+    offsetX = e.clientX - card.getBoundingClientRect().left;
+    offsetY = e.clientY - card.getBoundingClientRect().top;
+    card.style.cursor = 'grabbing';
+};
+
+document.onmousemove = function(e) {
+    if (!isDragging) return;
+    card.style.position = 'absolute';
+    card.style.margin = '0';
+    card.style.left = (e.clientX - offsetX) + 'px';
+    card.style.top = (e.clientY - offsetY) + 'px';
+};
+
+document.onmouseup = function() {
+    isDragging = false;
+    card.style.cursor = 'grab';
+};
