@@ -27,3 +27,29 @@ document.onmouseup = function() {
     isDragging = false;
     card.style.cursor = 'grab';
 };
+// Додаємо переклад візитівки
+const translations = {
+    ua: {
+        title: "Вітаю! Сайт працює",
+        description: "Домен pmg.pp.ua успішно підключено.",
+        status: "Це мій перший крок у веб-розробці."
+    },
+    en: {
+        title: "Welcome! Site is live",
+        description: "Domain pmg.pp.ua connected successfully.",
+        status: "This is my first step in web development."
+    },
+    it: {
+        title: "Benvenuti! Il sito è attivo",
+        description: "Dominio pmg.pp.ua collegato con successo.",
+        status: "Questo è il mio primo passo nello sviluppo web."
+    }
+};
+
+function changeLanguage(lang) {
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        el.innerText = translations[lang][key];
+    });
+}
