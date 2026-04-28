@@ -10,6 +10,7 @@
 /*    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
 }
 */
+html,
 body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background-attachment: fixed;
@@ -20,6 +21,8 @@ body {
     align-items: center;
     height: 100vh;
     color: white;
+	min-width: 430px;
+    border: 2px dashed #c7e4ff;
 }
 
 .card {
