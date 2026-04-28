@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script src="script.js"></script>
     <div class="language-switcher">
     <button onclick="changeLanguage('ua')">UA</button>
     <button onclick="changeLanguage('en')">EN</button>
@@ -38,6 +39,6 @@
     <footer>
       Погреб сайту
     </footer>
-    <script src="script.js"></script>
+    
   </body>
 </html>
