@@ -1,15 +1,38 @@
 /* stylefon.css */
 /* Плавна зміна кольорів та прозорості */
-.card {
+/*.card {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
 }
-
+*/
 /* Ефект при наведенні мишкою */
-.card:hover {
+/*.card:hover {
     transform: scale(1.02); /* Картка трохи збільшується */
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+/*    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+*/
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
 }
 
+.card {
+   /* Додайте ці рядки до існуючих */
+    position: relative; /* Щоб скрипт міг перемикати на absolute */
+    cursor: grab;       /* Курсор у вигляді "долоні" */
+    user-select: none;  /* Щоб текст не виділявся під час перетягування */
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
 /* Стиль для кнопок мов */
 .language-switcher {
     position: absolute;

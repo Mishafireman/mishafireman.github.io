@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 let isDragging = false;
 let offsetX, offsetY;
 
+// Коли ми натискаємо на карту
 card.onmousedown = function(e) {
     // Не починати перетягування, якщо ми клікнули по кнопці
     // if (e.target.tagName === 'BUTTON') return;
