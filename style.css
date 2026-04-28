@@ -21,10 +21,14 @@ body {
     align-items: center;
     height: 100vh;
     color: black; /* колір тексту */
-	line-height: 20px;
+	line-height: 20px; 
 /*	min-width: 430px;
     border: 2px dashed #c7e4ff; */
 }
+body {
+  min-width: 430px;
+  border: 2px dashed #c7e4ff;
+
 html::before,
 body::before,
 header::before,

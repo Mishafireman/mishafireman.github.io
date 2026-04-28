@@ -20,7 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: black;
+    color: black; /* колір тексту */
+	line-height: 20px;
 /*	min-width: 430px;
     border: 2px dashed #c7e4ff; */
 }
