@@ -1,0 +1,195 @@
+/* stylefon.css */
+/* Плавна зміна кольорів та прозорості */
+/*.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+}
+*/
+/* Ефект при наведенні мишкою */
+/*.card:hover {
+    transform: scale(1.02); /* Картка трохи збільшується */
+/*    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+*/
+/*
+@font-face {
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-style: normal;
+  src: url("fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-style: normal;
+  src: url("fonts/Montserrat-Bold.woff") format("woff");
+}
+*/
+html,
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+/*    justify-content: center;
+    align-items: center;
+    height: 100vh;   */
+    color: black; /* колір тексту */
+	line-height: 20px; 
+/*	min-width: 430px;
+    border: 2px dashed #c7e4ff; */
+}
+body {
+  min-width: 430px;
+  border: 2px dashed #c7e4ff;
+
+html::before,
+body::before,
+header::before,
+footer::before,
+main::before {
+  color: #7fc1ff;
+}
+main,
+header,
+footer {
+  background-color: #f3faff;
+  border: 2px solid #7fc1ff;
+}
+nav,
+section,
+article,
+aside {
+  background-color: #f9f7ff;
+  border: 2px solid #9779ec;
+}
+nav::before,
+section::before,
+article::before,
+aside::before {
+  color: #9779ec;
+}
+
+.card {
+   /* Додайте ці рядки до існуючих */
+    position: relative; /* Щоб скрипт міг перемикати на absolute */
+    cursor: grab;       /* Курсор у вигляді "долоні" */
+    user-select: none;  /* Щоб текст не виділявся під час перетягування */
+	background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+h1::before {
+  content: "h1";
+  color: #ff994f;
+}
+p {
+  background-color: #ffffff;
+  border: 2px solid #f36dff;
+}
+
+p::before {
+  color: #f36dff;
+  content: "p";
+}
+
+* {
+  position: relative;
+  padding: 25px 25px 20px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+*:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+*::before {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 10px;
+  letter-spacing: 0.04em;
+}
+
+html::before {
+  content: "html";
+}
+
+body::before {
+  content: "body";
+}
+
+main::before {
+  content: "main";
+}
+
+header::before {
+  content: "header";
+}
+
+footer::before {
+  content: "footer";
+}
+
+section::before {
+  content: "section";
+}
+
+article::before {
+  content: "article";
+}
+
+aside::before {
+  content: "aside";
+}
+
+nav::before {
+  content: "nav";
+}
+/* Стиль для кнопок мов */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switcher button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.language-switcher button:hover {
+    background: white;
+    color: #764ba2;
+}
+
+/* АДАПТИВНІСТЬ: якщо екран менше 600px (телефони) */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
