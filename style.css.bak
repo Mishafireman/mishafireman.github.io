@@ -31,9 +31,9 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    justify-content: center;
+/*    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;   */
     color: black; /* колір тексту */
 	line-height: 20px; 
 /*	min-width: 430px;

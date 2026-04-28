@@ -10,6 +10,7 @@
 /*    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
 }
 */
+/*
 @font-face {
   font-weight: 400;
   font-family: "Montserrat";
@@ -23,7 +24,7 @@
   font-style: normal;
   src: url("fonts/Montserrat-Bold.woff") format("woff");
 }
-
+*/
 html,
 body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
