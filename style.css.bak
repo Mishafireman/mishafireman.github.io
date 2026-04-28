@@ -21,8 +21,8 @@ body {
     align-items: center;
     height: 100vh;
     color: black;
-	min-width: 430px;
-    border: 2px dashed #c7e4ff;
+/*	min-width: 430px;
+    border: 2px dashed #c7e4ff; */
 }
 html::before,
 body::before,
