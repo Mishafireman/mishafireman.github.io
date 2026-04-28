@@ -24,6 +24,13 @@ body {
 	min-width: 430px;
     border: 2px dashed #c7e4ff;
 }
+html::before,
+body::before,
+header::before,
+footer::before,
+main::before {
+  color: #7fc1ff;
+}
 
 .card {
    /* Додайте ці рядки до існуючих */
