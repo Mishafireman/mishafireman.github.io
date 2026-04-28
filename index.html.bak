@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій перший сайт на GitHub</title>
+    <title>Сайт початківця</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="language-switcher">
+    <button onclick="changeLanguage('ua')">UA</button>
+    <button onclick="changeLanguage('en')">EN</button>
+    <button onclick="changeLanguage('it')">IT</button>
+    </div>
+    <div class="card">
+        <h1>Вітаю! Сайт працює</h1>
+        <p>Домен <strong>pmg.pp.ua</strong> успішно підключено до GitHub Pages.</p>
+        <p>Це мій перший крок у веб-розробці.</p>
+    </div>
+    <header>
+      <nav>
+        На головну
+      </nav>
+    </header>
+    <main>
+      <article>
+        Розпочав багато років назад ...
+
+        .....
+
+        .....
+      </article>
+      <aside>
+        У цьому місці буде реклама
+      </aside>
+    </main>
+    <footer>
+      Погреб сайту
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
